@@ -77,7 +77,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/CoreWebMicroservices/${project.artifactId}</url>
+            <url>https://maven.pkg.github.com/CoreWebMicroservices</url>
         </repository>
     </distributionManagement>
 
