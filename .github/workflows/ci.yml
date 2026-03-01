@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build-and-publish:
+    name: Build and Publish Parent POM
+    uses: CoreWebMicroservices/corems-project/.github/workflows/java-library-ci.yml@main
+    with:
+      java-version: '25'
+      run-tests: false
+      publish-artifacts: true
+    secrets:
+      github-token: ${{ secrets.PACKAGES_TOKEN || secrets.GITHUB_TOKEN }}
